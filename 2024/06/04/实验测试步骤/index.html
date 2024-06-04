@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="实验测试步骤 MQTT服务器测试运行。 阿里云服务器运行检查 https:&#x2F;&#x2F;ecs.console.aliyun.com&#x2F;server&#x2F;region&#x2F;cn-heyuan#&#x2F;查看阿里云服务器是否运行。 MQTT控制台检查，是否运行MQTT服务器脚本。 通过http:&#x2F;&#x2F;47.120.10.197:18083访问MQTT的Dashboard控制台。 user: admin，passwd:109238">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="实验测试步骤 MQTT服务器测试运行。 阿里云服务器运行检查 https:&#x2F;&#x2F;ecs.console.aliyun.com&#x2F;server&#x2F;region&#x2F;cn-heyuan#&#x2F;查看阿里云服务器是否运行。 MQTT控制台检查，是否运行MQTT服务器脚本。 通过http:&#x2F;&#x2F;47.120.10.197:18083访问MQTT的Dashboard控制台。 user: admin，passwd:109238">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://d0z4vd8gz1i.feishu.cn/space/api/box/stream/download/asynccode/?code=NTI3NzA2ZGM3YTViNTVhY2I0NjQyNzA0ZjQ0NzkwOTNfN1JzTjlVbmlMOU16aUZKRlR0WHY5ZXZyMVRXd2ZlWE5fVG9rZW46SkUwcmI5WlN5b1Vrdmd4Z0MzdWNrMHBoblNiXzE3MTc0NzQxNzU6MTcxNzQ3Nzc3NV9WNA">
+<meta property="og:image" content="https://d0z4vd8gz1i.feishu.cn/space/api/box/stream/download/asynccode/?code=YTM3ZTY1ZGQ5ZWNlYzI1NzA1YzA1MDEwMDViMDA0YmNfOTl1MUl4MjZFMURXU3BMMDV2b3YwOEVOUHVuT0Y1TnpfVG9rZW46VWd3MGJRdk9mb3pkbWN4bmVhOGNZdkRWbjZjXzE3MTc0NzQxNzU6MTcxNzQ3Nzc3NV9WNA">
+<meta property="article:published_time" content="2024-06-04T04:11:26.095Z">
+<meta property="article:modified_time" content="2024-06-04T04:10:19.505Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://d0z4vd8gz1i.feishu.cn/space/api/box/stream/download/asynccode/?code=NTI3NzA2ZGM3YTViNTVhY2I0NjQyNzA0ZjQ0NzkwOTNfN1JzTjlVbmlMOU16aUZKRlR0WHY5ZXZyMVRXd2ZlWE5fVG9rZW46SkUwcmI5WlN5b1Vrdmd4Z0MzdWNrMHBoblNiXzE3MTc0NzQxNzU6MTcxNzQ3Nzc3NV9WNA">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-实验测试步骤" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/" class="article-date">
+  <time class="dt-published" datetime="2024-06-04T04:11:26.095Z" itemprop="datePublished">2024-06-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="实验测试步骤"><a href="#实验测试步骤" class="headerlink" title="实验测试步骤"></a>实验测试步骤</h1><ol>
+<li>MQTT服务器测试运行。<ol>
+<li><code>阿里云服务器运行检查</code> <code>https://ecs.console.aliyun.com/server/region/cn-heyuan#/</code>查看阿里云服务器是否运行。</li>
+<li>MQTT控制台检查，是否运行MQTT服务器脚本。 通过<code>http://47.120.10.197:18083</code>访问MQTT的Dashboard控制台。 user: admin，passwd:1092387456jsc!!</li>
+<li>本地打开MQTTX客户端，发送msg观察Dashboard测试。</li>
+</ol>
+</li>
+<li>摄像头和主控板配网。 需要局域网，wifi或者开热点。首先需要获得WIFI 的 ip 地址和 WiFi 账户和密码。<ol>
+<li>摄像头配网：<ol>
+<li>短接线5s左右，听到滴声，进入默认AP模式。wifi搜索Cam_XXXX.</li>
+<li>IP地址：192.168.200.1，打开SAT模式，选择WIFI，输入密码，然后配网成功。</li>
+</ol>
+</li>
+<li>主控板配网：<ol>
+<li>在stm32主控程序中，esp8266.c文件：</li>
+<li>修改wifi名称和密码：<code>#define ESP8266_WIFI_INFO    &quot;AT+CWJAP=\&quot;TP-LINK_C6A424\&quot;,\&quot;lab302302\&quot;\r\n&quot;</code></li>
+<li>修改MQTT服务器IP地址： <code> #define ESP8266_ONENET_INFO   &quot;AT+CIPSTART=\&quot;TCP\&quot;,\emqx@47.120.10.197\&quot;,1883\r\n&quot;</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>手机遥控实现自检测试。test</li>
+<li>手机远程控制采集图像。<ol>
+<li>前进，后退，旋转转台。图片和视频本地保存。上位机设计。</li>
+</ol>
+</li>
+</ol>
+<h1 id="My-PipeLine-Robot-APP使用指南"><a href="#My-PipeLine-Robot-APP使用指南" class="headerlink" title="My PipeLine Robot APP使用指南"></a>My PipeLine Robot APP使用指南</h1><p><img src="https://d0z4vd8gz1i.feishu.cn/space/api/box/stream/download/asynccode/?code=NTI3NzA2ZGM3YTViNTVhY2I0NjQyNzA0ZjQ0NzkwOTNfN1JzTjlVbmlMOU16aUZKRlR0WHY5ZXZyMVRXd2ZlWE5fVG9rZW46SkUwcmI5WlN5b1Vrdmd4Z0MzdWNrMHBoblNiXzE3MTc0NzQxNzU6MTcxNzQ3Nzc3NV9WNA" alt="img"></p>
+<p>长按才能设置速度。</p>
+<h1 id="EMQX"><a href="#EMQX" class="headerlink" title="EMQX"></a>EMQX</h1><p>采用EMQX开源版进行部署</p>
+<p><a target="_blank" rel="noopener" href="https://www.emqx.io/docs/zh/latest/getting-started/getting-started.html">https://www.emqx.io/docs/zh/latest/getting-started/getting-started.html</a></p>
+<p>注意：如果运行不起需要额外安装C++系统库。直接百度搜官网下载安装即可。</p>
+<ul>
+<li><code>http://localhost:18083/</code>查看MQTT控制台</li>
+<li>公网ip<ul>
+<li><code>47.120.10.197</code></li>
+<li>通过<code>http://47.120.10.197:18083</code>访问MQTT的Dashbaoard控制台。passwd:1092387456jsc!!</li>
+<li>其他连接的设备采用1883连接。即：<code>http://47.120.10.197:1883</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://d0z4vd8gz1i.feishu.cn/space/api/box/stream/download/asynccode/?code=YTM3ZTY1ZGQ5ZWNlYzI1NzA1YzA1MDEwMDViMDA0YmNfOTl1MUl4MjZFMURXU3BMMDV2b3YwOEVOUHVuT0Y1TnpfVG9rZW46VWd3MGJRdk9mb3pkbWN4bmVhOGNZdkRWbjZjXzE3MTc0NzQxNzU6MTcxNzQ3Nzc3NV9WNA" alt="img"></p>
+<ul>
+<li>passwd:ek&#x3D;hv-w0</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/" data-id="clwzvuwr10000zgtr1yuu4wia" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
