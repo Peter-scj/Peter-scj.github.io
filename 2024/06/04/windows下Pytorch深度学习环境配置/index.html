@@ -1,18 +1,28 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="windows下Pytorch深度学习环境配置 在进行深度学习环境配置时，需要下载python，但是不要直接去官网 download python。我们通过别的方式安装下载python环境。  库&#x2F;包&#x2F;package&#x2F;library别人分享的工具和模板。例如：  matplotlib：matlab用python封装好的包，用于利用python画图。 pytorchte">
+    <meta name="description" content="windows下Pytorch深度学习环境配置 在进行深度学习环境配置时，需要下载python，但是不要直接去官网 download python。我们通过别的方式安装下载python环境。  库&#x2F;包&#x2F;package&#x2F;library别人分享的工具和模板。例如：  matplotlib：matlab用python封装好的包，用于利用python画图。 pytorchte">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="windows下Pytorch深度学习环境配置 在进行深度学习环境配置时，需要下载python，但是不要直接去官网 download python。我们通过别的方式安装下载python环境。  库&#x2F;包&#x2F;package&#x2F;library别人分享的工具和模板。例如：  matplotlib：matlab用python封装好的包，用于利用python画图。 pytorchte">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523100408729.png">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523110155659.png">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523105911447.png">
@@ -38,75 +48,254 @@
 <meta property="article:published_time" content="2024-06-04T03:37:31.087Z">
 <meta property="article:modified_time" content="2024-06-04T03:47:58.079Z">
 <meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523100408729.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <title>Hexo</title>
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 <meta name="generator" content="Hexo 7.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
 
-      <div class="outer">
-        <section id="main"><article id="post-windows下Pytorch深度学习环境配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time class="dt-published" datetime="2024-06-04T03:37:31.087Z" itemprop="datePublished">2024-06-04</time>
-</a>
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-04 11:37" pubdate>
+          2024年6月4日 中午
+        </time>
+      </span>
     
   </div>
-  <div class="article-inner">
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          32 分钟
+        
+      </span>
+    
+
     
     
-    <div class="e-content article-entry" itemprop="articleBody">
+  </div>
+
+
+        
+      </div>
+
       
-        <h1 id="windows下Pytorch深度学习环境配置"><a href="#windows下Pytorch深度学习环境配置" class="headerlink" title="windows下Pytorch深度学习环境配置"></a>windows下Pytorch深度学习环境配置</h1><ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="windows下Pytorch深度学习环境配置"><a href="#windows下Pytorch深度学习环境配置" class="headerlink" title="windows下Pytorch深度学习环境配置"></a>windows下Pytorch深度学习环境配置</h1><ul>
 <li><p>在进行深度学习环境配置时，需要下载python，但是不要直接去官网 download python。<br>我们通过别的方式安装下载python环境。</p>
 </li>
 <li><p>库&#x2F;包&#x2F;package&#x2F;library<br>别人分享的工具和模板。<br>例如：</p>
@@ -124,7 +313,7 @@
 <p><strong>conda和pip都是python的包管理工具。</strong></p>
 <p>但是做深度学习的环境配置我们一般喜欢采用conda命令进行python包的下载，而不用pip，原因是conda有虚拟环境的概念。即他会为不同版本的python分别创建独立的环境，不同版本的python及其所属的安装包可以独立存在，且互不影响。这样，我们可以根据不同项目的实际需要下载多个不同版本的python，由anaconda提供的不同虚拟环境为我们管理这些不同环境即可。而pip则相反，pip仅对应电脑上当前默认的python版本（即我们通过python官网直接download下载的版本，这种下载方式不允许下载多个不同版本的python，如果需要更换其他版本，则需要将当前版本先卸载，然后再下载安装新的版本）。</p>
 <p><strong>为避免python版本冲突，在安装anaconda前最好先卸载自己电脑上之前已经通过python官网download的python，然后再去下载anaconda，用anaconda统一管理电脑上的python环境。</strong></p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523100408729.png" alt="Anaconda"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523100408729.png" srcset="/img/loading.gif" lazyload alt="Anaconda"></p>
 <p>在anaconda中我们可以为不同的虚拟环境起不同的名字，通过命令切换环境名字就可以实现切换不同的python环境。</p>
 <p>各个不同的环境的目录是在anaconda的安装目录下的env目录下进行管理。</p>
 <p>安装完anaconda默认会创建一个环境，叫做：base，该环境下默认会安装有很多的conda提供的库（包），主要用于科学计算。</p>
@@ -157,29 +346,29 @@
 </ul>
 </li>
 </ul>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523110155659.png" alt="显卡驱动、显卡软件CUDA与Pytorch等的关系"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523110155659.png" srcset="/img/loading.gif" lazyload alt="显卡驱动、显卡软件CUDA与Pytorch等的关系"></p>
 <ul>
 <li><p>注意：上图中的CUDA runtime version和CUDA Driver Version不是同个东西，相差甚远。<br>CUDA runtime version指的是软件层面的CUDA，换言之这个才是我们熟知的CUDA编程语言。而驱动层的CUDA driver version是显卡硬件的驱动。<strong>我们在pytorch官网看到的需要安装的cuda指的是cuda runtime version。指的是软件层面的CUDA</strong></p>
 </li>
 <li><p>GPU和CPU的区别</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523105911447.png" alt="CPU和GPU的区别"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523105911447.png" srcset="/img/loading.gif" lazyload alt="CPU和GPU的区别"></p>
 <p>GPU相比如CPU 有更多的逻辑处理单位ALU，可以并行处理很多简单重复的任务。</p>
 <p>CPU可以通过复杂的控制逻辑可以优化处理<strong>复杂的任务</strong>。GPU可以并行处理大量<strong>简单重复的任务</strong>。</p>
 <p>深度学习并不一定需要使用GPU，有无GPU并不影响深度学习模型最后的训练效果，只是GPU可以加快深度学习的训练速度，大大缩短训练时间。</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523112114166.png" alt="深度学习中各软件的关系"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523112114166.png" srcset="/img/loading.gif" lazyload alt="深度学习中各软件的关系"></p>
 </li>
 <li><p>计算机中安装anaconda和pycharm。<br>anaconda负责管理不同的python环境以及在该环境下安装的不同的库（包），包括tensorflow，pytorch，cuda(如果需要用到GPU进行训练时需要安装)等。<br>pycharm是poython IDE，用来写python代码以及代码的debug。</p>
 <p>用pycharm写好代码后，并且配置好该项目代码所用到的python解释器（python环境），而后将调用该环境中的各种库，利用该环境的python解释器在计算机CPU中来对代码进行解释执行，如果过程中需要用到GPU进行训练，还需要在anaconda中安装cuda库（包），这样当CPU执行到需要用GPU执行的语句时，会发送指令给到GPU从而实现在GPU上进行训练。</p>
 </li>
 </ul>
-<h1 id="正式开始安装"><a href="#正式开始安装" class="headerlink" title="正式开始安装"></a>正式开始安装</h1><p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523113507247.png" alt="安装基本流程"></p>
+<h1 id="正式开始安装"><a href="#正式开始安装" class="headerlink" title="正式开始安装"></a>正式开始安装</h1><p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523113507247.png" srcset="/img/loading.gif" lazyload alt="安装基本流程"></p>
 <p>第一步：下载anaconda</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523113627864.png" alt="anaconda官网"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523113627864.png" srcset="/img/loading.gif" lazyload alt="anaconda官网"></p>
 <ul>
 <li>注意：以上是anaconda官网显示的信息，表示如果安装该版本的anaconda，其虚拟环境中最高可以支持安装3.9版本的python解释器。所以：对于anaconda的下载，下载最新版本即可，这样支持的python解释器更多，方便后面配置。</li>
 </ul>
 <p>第二步：在下载好的anaconda下创建虚拟环境（也可以不安装，默认用base环境也行）。</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523143014725.png" alt="创建虚拟环境"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523143014725.png" srcset="/img/loading.gif" lazyload alt="创建虚拟环境"></p>
 <ul>
 <li>建议在虚拟环境中安装的python版本高于3.5以上，例如3.6版本。</li>
 <li>在anaconda下的终端执行常用conda指令如下：<ul>
@@ -191,12 +380,12 @@
 </li>
 </ul>
 <p>在进行第三步前的准备工作：</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523150039101.png" alt="GPU版本安装需要注意的事项（CUDA）"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523150039101.png" srcset="/img/loading.gif" lazyload alt="GPU版本安装需要注意的事项（CUDA）"></p>
 <ul>
 <li><p>cuda runtime（软件cuda） 的版本要小于 cuda driver（硬件驱动）的版本。</p>
 </li>
 <li><p>显卡对应的算力可以在nividia官网查询。<a target="_blank" rel="noopener" href="https://www.nvidia.cn/geforce/graphics-cards/compare/">NVIDIA显卡cuda算力查询</a></p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523150818673.png" alt="显卡对应CUDA算力"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523150818673.png" srcset="/img/loading.gif" lazyload alt="显卡对应CUDA算力"></p>
 </li>
 </ul>
 <h1 id="举例分析"><a href="#举例分析" class="headerlink" title="举例分析"></a>举例分析</h1><ol>
@@ -205,14 +394,14 @@
 <li><p>查看显卡CUDA算力（Compute Capability）。<br>显卡对应的算力可以在nividia官网查询。<a target="_blank" rel="noopener" href="https://www.nvidia.cn/geforce/graphics-cards/compare/">NVIDIA显卡cuda算力查询</a>。<br>查询可知 RTX3090 对应的算力(CUDA能力)为8.6</p>
 </li>
 <li><p>确定CUDA Runtime。（即cuda软件SDK的版本）<br>根据上面第1步和第2步知道的我们显卡对应的算力，从而选择满足我们显卡算力要求的 CUDA Runtime Version。<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/CUDA#GPUs_supported">CUDA算力对应可以使用的CUDA SDK</a><br>如下表所示，因为我们的显卡算力为8.6，所以支持该算力的CUDA SDK Version应当大于等于11.1以上。即我们在安装pytorch时选择的CUDA Runtime Version 应当大于等于 11.1。</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523162618799.png" alt="CUDA算力对应的CUDA Runtime Version"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523162618799.png" srcset="/img/loading.gif" lazyload alt="CUDA算力对应的CUDA Runtime Version"></p>
 </li>
 <li><p>查看自己的显卡硬件驱动（CUDA driver version）<br>打开cmd，输入命令：<code>nvidia-smi</code> 查看。<br>如下图所示：本机的显卡硬件驱动版本为：512.15，可以支持的最高CUDA Runtime 版本为：11.6。（显卡硬件驱动必须高于cuda runtime version）</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523160053442.png" alt="查看显卡硬件驱动 CUDA driver version"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523160053442.png" srcset="/img/loading.gif" lazyload alt="查看显卡硬件驱动 CUDA driver version"></p>
 </li>
 </ol>
 <p>综上：第3步可知我们的显卡必须使用11.1版本以上的 CUDA Runtime Version，而第4步可知显卡当前的硬件驱动可支持最高位11.6版本的 CUDA Runtime Version。因此当前环境下我们可以选用的 CUDA Runtime Version 为：11.1~11.6之间，在不升级显卡硬件驱动的情况下，我们可以选择最新版本，即11.6版本即可。即在安装Pytorch时选择的CUDA版本为11.6.</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523164424470.png" alt="增加镜像通道"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523164424470.png" srcset="/img/loading.gif" lazyload alt="增加镜像通道"></p>
 <ul>
 <li><p>conda管理的包默认从default路径下载库&#x2F;包。default路径是anaconda的国外服务器，所以一般用默认路径下载一些包时会比较慢，因此可以采用一些国内的镜像网站进行下载。</p>
 <blockquote>
@@ -240,7 +429,7 @@
 </blockquote>
 </li>
 <li><p>cmd 终端输入 <code>nvidia-smi</code> 查看更新硬件驱动后本机显卡可支持的最高CUDA Version（CUDA Runtime Version，注意这里是指CUDA软件版本而不是CUDA算力）。<br>如下图所示更新显卡硬件驱动后我的显卡可支持最高12.1的CUDA Runtime Version。因此只需要保证在安装Pytorch时的CUDA版本低于12.1即可，选择小于12.1且最接近的12.1的那个最新版本。</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523172456277.png" alt="nvidia-smi 查看最高可支持的CUDA Version"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523172456277.png" srcset="/img/loading.gif" lazyload alt="nvidia-smi 查看最高可支持的CUDA Version"></p>
 </li>
 <li><p>打开PyTorch官网，确定CUDA Runtime版本。</p>
 </li>
@@ -255,7 +444,7 @@
 </blockquote>
 </li>
 <li><p><strong>注意：确认下载前仔细查看一下下载的pytorch版本以及cuda版本是否是选择的版本！尤其是切换为国内镜像源的情况下，仔细查看一下，免得下载错误造成麻烦！</strong></p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523221130402.png" alt="确认下载前仔细核对下载的pytorch cuda版本号"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523221130402.png" srcset="/img/loading.gif" lazyload alt="确认下载前仔细核对下载的pytorch cuda版本号"></p>
 </li>
 <li><p><strong>如果速度不慢，推荐从官网下载，以防出现奇怪的错误！</strong></p>
 </li>
@@ -270,26 +459,26 @@
 </blockquote>
 </li>
 </ol>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523220654637.png" alt="利用conda命令下载安装pytorch"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523220654637.png" srcset="/img/loading.gif" lazyload alt="利用conda命令下载安装pytorch"></p>
 <p>方法2：用pip进行下载</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523215443989.png" alt="用pip命令下载安装pytorch"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523215443989.png" srcset="/img/loading.gif" lazyload alt="用pip命令下载安装pytorch"></p>
 <ul>
 <li>pip install 和 pip3 install作用相同，用 pip install 就好。</li>
 <li><strong>由于torch包比较大</strong>，一般1，2个G，为了进一步加快torch下载速度，可以把pytorch官网提供的用pip下载的url复制，然后用迅雷进行本地下载，然后下载好后打开anaconda终端，进入需要安装torch包的虚拟环境（conda activate …），然后pip install …（将该文件拖入终端获得地址）即可<strong>离线安装torch包</strong>。</li>
 <li>由于torchvision、torchaudio包一般都比较小，大概几M左右，所以可以通过官方的网站进行下载。</li>
 </ul>
 <p>验证pytorch是否安装成功</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523223244776.png" alt="验证pytorch是否安装成功的步骤"></p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523223543980.png" alt="pytorch安装成功演示"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523223244776.png" srcset="/img/loading.gif" lazyload alt="验证pytorch是否安装成功的步骤"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523223543980.png" srcset="/img/loading.gif" lazyload alt="pytorch安装成功演示"></p>
 <h1 id="安装-pycharm"><a href="#安装-pycharm" class="headerlink" title="安装 pycharm"></a>安装 pycharm</h1><p>配置pycharm项目的python解释器</p>
 <p>step1：</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523230759432.png" alt="PyCharm中创建项目第一步"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523230759432.png" srcset="/img/loading.gif" lazyload alt="PyCharm中创建项目第一步"></p>
 <p>step2：</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523230409940.png" alt="PyCharm中创建项目第二步"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523230409940.png" srcset="/img/loading.gif" lazyload alt="PyCharm中创建项目第二步"></p>
 <p>如果运行代码发现默认使用不是自己需要的anaconda环境的python解释器，则可以在 pycharm 中的 <code>file—&gt;settings—&gt;Projects—&gt;Python Interpreter(python解释器)</code> 中进行重新配置所需的python解释器的路径。</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523231921111.png" alt="Pycharm中重新配置项目的python解释器"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523231921111.png" srcset="/img/loading.gif" lazyload alt="Pycharm中重新配置项目的python解释器"></p>
 <p>给下载的项目设置合适的虚拟环境</p>
-<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523233255984.png" alt="给下载的项目设置合适的虚拟环境"></p>
+<p><img src="/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523233255984.png" srcset="/img/loading.gif" lazyload alt="给下载的项目设置合适的虚拟环境"></p>
 <ul>
 <li>conda install 下载安装不了包时可以采用 pip install。</li>
 </ul>
@@ -299,117 +488,338 @@
 <li>当使用国内镜像源下载安装pytorch时，可以先使用 <code>conda search pytorch==版本 -c 镜像站通道</code> 来查看是否在该镜像站存在有该版本的pytorch包，然后再进行下一步去安装。</li>
 </ul>
 
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2024/06/04/windows下Pytorch深度学习环境配置/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年6月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-id="clwzvuwr40001zgtr2ltga8ad" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
+    <div class="license-icon iconfont"></div>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
       </div>
-    </a>
-  
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li></ul>
     </div>
-  </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/06/04/%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%AD%A5%E9%AA%A4/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
-    <nav id="mobile-nav">
+  </div>
+</div>
+
+
+
+
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+
+
+
   
-</nav>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
