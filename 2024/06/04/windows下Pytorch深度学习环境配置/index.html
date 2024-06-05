@@ -13,15 +13,15 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="PeterJ">
   <meta name="keywords" content="">
   
-    <meta name="description" content="windows下Pytorch深度学习环境配置 在进行深度学习环境配置时，需要下载python，但是不要直接去官网 download python。我们通过别的方式安装下载python环境。  库&#x2F;包&#x2F;package&#x2F;library别人分享的工具和模板。例如：  matplotlib：matlab用python封装好的包，用于利用python画图。 pytorchte">
+    <meta name="description" content="深度学习环境配置-pytorch安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="windows下深度学习环境配置-PyTorch安装">
 <meta property="og:url" content="http://example.com/2024/06/04/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="windows下Pytorch深度学习环境配置 在进行深度学习环境配置时，需要下载python，但是不要直接去官网 download python。我们通过别的方式安装下载python环境。  库&#x2F;包&#x2F;package&#x2F;library别人分享的工具和模板。例如：  matplotlib：matlab用python封装好的包，用于利用python画图。 pytorchte">
+<meta property="og:site_name" content="Blog-Peter J">
+<meta property="og:description" content="深度学习环境配置-pytorch安装">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523100408729.png">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523110155659.png">
@@ -45,15 +45,16 @@
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523230409940.png">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523231921111.png">
 <meta property="og:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523233255984.png">
-<meta property="article:published_time" content="2024-06-04T03:37:31.087Z">
-<meta property="article:modified_time" content="2024-06-04T03:47:58.079Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:published_time" content="2024-06-04T01:25:00.000Z">
+<meta property="article:modified_time" content="2024-06-04T13:27:47.206Z">
+<meta property="article:tag" content="深度学习">
+<meta property="article:tag" content="PyTorch">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/windows%E4%B8%8BPytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20230523100408729.png">
   
   
   
-  <title>Hexo</title>
+  <title>windows下深度学习环境配置-PyTorch安装 - Blog-Peter J</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -91,7 +92,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -117,7 +118,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>PeterJ</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -213,13 +214,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="windows下深度学习环境配置-PyTorch安装"></span>
           
         </div>
 
@@ -230,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-04 11:37" pubdate>
-          2024年6月4日 中午
+        <time datetime="2024-06-04 09:25" pubdate>
+          2024年6月4日 上午
         </time>
       </span>
     
@@ -283,6 +284,19 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
 
@@ -290,7 +304,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">windows下深度学习环境配置-PyTorch安装</h1>
             
             
               <div class="markdown-body">
@@ -487,6 +501,10 @@
 <li>下载命令和普通方式命令类似，在pytorch官网上查就行。<br><code>conda install pytorch==旧版本 torchvision==旧版本 torchaudio==旧版本 -c 下载通道【可以换成镜像通道】 </code> </li>
 <li>当使用国内镜像源下载安装pytorch时，可以先使用 <code>conda search pytorch==版本 -c 镜像站通道</code> 来查看是否在该镜像站存在有该版本的pytorch包，然后再进行下一步去安装。</li>
 </ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import pytorch<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&quot;hello world&quot;</span>)</span></span><br></code></pre></td></tr></table></figure>
+
+
+
 
                 
               </div>
@@ -495,6 +513,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI/" class="category-chain-item">AI</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="print-no-link">#深度学习</a>
+      
+        <a href="/tags/PyTorch/" class="print-no-link">#PyTorch</a>
+      
+    </div>
   
 </div>
 
@@ -504,14 +552,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>windows下深度学习环境配置-PyTorch安装</div>
       <div>http://example.com/2024/06/04/windows下Pytorch深度学习环境配置/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>PeterJ</div>
         </div>
       
       
@@ -559,6 +607,12 @@
                   <article class="post-next col-6">
                     
                     
+                      <a href="/2022/06/15/AI/" title="AI">
+                        <span class="hidden-mobile">AI</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
                   </article>
                 </div>
               
@@ -572,19 +626,6 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
 
     </div>
   </div>
